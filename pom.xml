@@ -11,6 +11,7 @@
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<activemq.version>5.14.3</activemq.version>
 		<derby.version>10.13.1.1</derby.version>
 		<mule.version>3.8.3</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
@@ -62,6 +63,26 @@
 			<artifactId>mule-core-ee</artifactId>
 			<version>${mule.version}</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.derby</groupId>
+		    <artifactId>derby</artifactId>
+		    <version>${derby.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-client</artifactId>
+		    <version>${activemq.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-kahadb-store</artifactId>
+		    <version>${activemq.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-broker</artifactId>
+		    <version>${activemq.version}</version>
 		</dependency>
 		<!-- Xml configuration -->
 		<dependency>
@@ -127,26 +148,6 @@
             <version>${mule.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.12</version>
-    <scope>test</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.derby/derby -->
-<dependency>
-    <groupId>org.apache.derby</groupId>
-    <artifactId>derby</artifactId>
-    <version>${derby.version}</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
-<dependency>
-    <groupId>org.apache.activemq</groupId>
-    <artifactId>activemq-core</artifactId>
-    <version>5.7.0</version>
-</dependency>
-
     <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-spring-config</artifactId>
